@@ -99,8 +99,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\SpAccountTransferResponse
      */
-    public function spAccountTransferUsingPOST($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function spAccountTransferUsingPOST($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->spAccountTransferUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -117,8 +118,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\SpAccountTransferResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function spAccountTransferUsingPOSTWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function spAccountTransferUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\SpAccountTransferResponse';
         $request = $this->spAccountTransferUsingPOSTRequest($body, $x_access_token);
 
@@ -288,8 +290,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function spAccountTransferUsingPOSTAsync($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function spAccountTransferUsingPOSTAsync($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->spAccountTransferUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -309,8 +312,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function spAccountTransferUsingPOSTAsyncWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function spAccountTransferUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\SpAccountTransferResponse';
         $request = $this->spAccountTransferUsingPOSTRequest($body, $x_access_token);
 
@@ -360,8 +364,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function spAccountTransferUsingPOSTRequest($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function spAccountTransferUsingPOSTRequest($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -467,8 +472,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\TransferCancelResponse
      */
-    public function transferCancelUsingPOST($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferCancelUsingPOST($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->transferCancelUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -485,8 +491,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\TransferCancelResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function transferCancelUsingPOSTWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferCancelUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferCancelResponse';
         $request = $this->transferCancelUsingPOSTRequest($body, $x_access_token);
 
@@ -656,8 +663,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferCancelUsingPOSTAsync($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferCancelUsingPOSTAsync($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->transferCancelUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -677,8 +685,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferCancelUsingPOSTAsyncWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferCancelUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferCancelResponse';
         $request = $this->transferCancelUsingPOSTRequest($body, $x_access_token);
 
@@ -728,8 +737,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function transferCancelUsingPOSTRequest($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function transferCancelUsingPOSTRequest($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -835,8 +845,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\TransferFeeResponse
      */
-    public function transferFeeUsingPOST($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferFeeUsingPOST($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->transferFeeUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -853,8 +864,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\TransferFeeResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function transferFeeUsingPOSTWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferFeeUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferFeeResponse';
         $request = $this->transferFeeUsingPOSTRequest($body, $x_access_token);
 
@@ -1024,8 +1036,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferFeeUsingPOSTAsync($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferFeeUsingPOSTAsync($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->transferFeeUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -1045,8 +1058,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferFeeUsingPOSTAsyncWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferFeeUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferFeeResponse';
         $request = $this->transferFeeUsingPOSTRequest($body, $x_access_token);
 
@@ -1096,8 +1110,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function transferFeeUsingPOSTRequest($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function transferFeeUsingPOSTRequest($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -1204,8 +1219,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\TransferRequestResultResponse
      */
-    public function transferRequestResultUsingGET($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferRequestResultUsingGET($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->transferRequestResultUsingGETWithHttpInfo($account_id, $apply_no, $x_access_token);
         return $response;
     }
@@ -1223,8 +1239,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\TransferRequestResultResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function transferRequestResultUsingGETWithHttpInfo($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferRequestResultUsingGETWithHttpInfo($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferRequestResultResponse';
         $request = $this->transferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token);
 
@@ -1395,8 +1412,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferRequestResultUsingGETAsync($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferRequestResultUsingGETAsync($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->transferRequestResultUsingGETAsyncWithHttpInfo($account_id, $apply_no, $x_access_token)
             ->then(
                 function ($response) {
@@ -1417,8 +1435,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferRequestResultUsingGETAsyncWithHttpInfo($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferRequestResultUsingGETAsyncWithHttpInfo($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferRequestResultResponse';
         $request = $this->transferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token);
 
@@ -1469,8 +1488,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function transferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function transferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'account_id' is set
         if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -1587,8 +1607,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\TransferRequestResponse
      */
-    public function transferRequestUsingPOST($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferRequestUsingPOST($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->transferRequestUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -1605,8 +1626,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\TransferRequestResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function transferRequestUsingPOSTWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferRequestUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferRequestResponse';
         $request = $this->transferRequestUsingPOSTRequest($body, $x_access_token);
 
@@ -1776,8 +1798,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferRequestUsingPOSTAsync($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferRequestUsingPOSTAsync($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->transferRequestUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -1797,8 +1820,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferRequestUsingPOSTAsyncWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function transferRequestUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferRequestResponse';
         $request = $this->transferRequestUsingPOSTRequest($body, $x_access_token);
 
@@ -1848,8 +1872,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function transferRequestUsingPOSTRequest($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function transferRequestUsingPOSTRequest($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -1963,8 +1988,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\TransferStatusResponse
      */
-    public function transferStatusUsingGET($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    public function transferStatusUsingGET($account_id, $query_key_class, $x_access_token = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->transferStatusUsingGETWithHttpInfo($account_id, $query_key_class, $x_access_token, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term);
         return $response;
     }
@@ -1989,8 +2015,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\TransferStatusResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function transferStatusUsingGETWithHttpInfo($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    public function transferStatusUsingGETWithHttpInfo($account_id, $query_key_class, $x_access_token = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferStatusResponse';
         $request = $this->transferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term);
 
@@ -2168,8 +2195,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferStatusUsingGETAsync($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    public function transferStatusUsingGETAsync($account_id, $query_key_class, $x_access_token = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->transferStatusUsingGETAsyncWithHttpInfo($account_id, $query_key_class, $x_access_token, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term)
             ->then(
                 function ($response) {
@@ -2197,8 +2225,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transferStatusUsingGETAsyncWithHttpInfo($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    public function transferStatusUsingGETAsyncWithHttpInfo($account_id, $query_key_class, $x_access_token = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransferStatusResponse';
         $request = $this->transferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term);
 
@@ -2256,8 +2285,9 @@ class TransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function transferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    protected function transferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'account_id' is set
         if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
             throw new \InvalidArgumentException(

@@ -102,8 +102,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\DepositTransactionsResponse
      */
-    public function accountsDepositTransactionsUsingGET($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function accountsDepositTransactionsUsingGET($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->accountsDepositTransactionsUsingGETWithHttpInfo($account_id, $x_access_token, $date_from, $date_to, $next_item_key);
         return $response;
     }
@@ -123,8 +124,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\DepositTransactionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function accountsDepositTransactionsUsingGETWithHttpInfo($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function accountsDepositTransactionsUsingGETWithHttpInfo($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\DepositTransactionsResponse';
         $request = $this->accountsDepositTransactionsUsingGETRequest($account_id, $x_access_token, $date_from, $date_to, $next_item_key);
 
@@ -297,8 +299,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function accountsDepositTransactionsUsingGETAsync($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function accountsDepositTransactionsUsingGETAsync($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->accountsDepositTransactionsUsingGETAsyncWithHttpInfo($account_id, $x_access_token, $date_from, $date_to, $next_item_key)
             ->then(
                 function ($response) {
@@ -321,8 +324,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function accountsDepositTransactionsUsingGETAsyncWithHttpInfo($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function accountsDepositTransactionsUsingGETAsyncWithHttpInfo($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\DepositTransactionsResponse';
         $request = $this->accountsDepositTransactionsUsingGETRequest($account_id, $x_access_token, $date_from, $date_to, $next_item_key);
 
@@ -375,8 +379,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function accountsDepositTransactionsUsingGETRequest($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    protected function accountsDepositTransactionsUsingGETRequest($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'account_id' is set
         if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -494,8 +499,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\AccountsResponse
      */
-    public function accountsUsingGET($x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function accountsUsingGET($x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->accountsUsingGETWithHttpInfo($x_access_token);
         return $response;
     }
@@ -511,8 +517,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\AccountsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function accountsUsingGETWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function accountsUsingGETWithHttpInfo($x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\AccountsResponse';
         $request = $this->accountsUsingGETRequest($x_access_token);
 
@@ -681,8 +688,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function accountsUsingGETAsync($x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function accountsUsingGETAsync($x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->accountsUsingGETAsyncWithHttpInfo($x_access_token)
             ->then(
                 function ($response) {
@@ -701,8 +709,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function accountsUsingGETAsyncWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function accountsUsingGETAsyncWithHttpInfo($x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\AccountsResponse';
         $request = $this->accountsUsingGETRequest($x_access_token);
 
@@ -751,8 +760,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function accountsUsingGETRequest($x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function accountsUsingGETRequest($x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -849,8 +859,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\BalancesResponse
      */
-    public function balancesUsingGET($x_access_token = $_ENV['X_ACCESS_TOKEN'], $account_id = null)
+    public function balancesUsingGET($x_access_token = null, $account_id = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->balancesUsingGETWithHttpInfo($x_access_token, $account_id);
         return $response;
     }
@@ -867,8 +878,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\BalancesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function balancesUsingGETWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $account_id = null)
+    public function balancesUsingGETWithHttpInfo($x_access_token = null, $account_id = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\BalancesResponse';
         $request = $this->balancesUsingGETRequest($x_access_token, $account_id);
 
@@ -1038,8 +1050,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function balancesUsingGETAsync($x_access_token = $_ENV['X_ACCESS_TOKEN'], $account_id = null)
+    public function balancesUsingGETAsync($x_access_token = null, $account_id = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->balancesUsingGETAsyncWithHttpInfo($x_access_token, $account_id)
             ->then(
                 function ($response) {
@@ -1059,8 +1072,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function balancesUsingGETAsyncWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $account_id = null)
+    public function balancesUsingGETAsyncWithHttpInfo($x_access_token = null, $account_id = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\BalancesResponse';
         $request = $this->balancesUsingGETRequest($x_access_token, $account_id);
 
@@ -1110,8 +1124,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function balancesUsingGETRequest($x_access_token = $_ENV['X_ACCESS_TOKEN'], $account_id = null)
+    protected function balancesUsingGETRequest($x_access_token = null, $account_id = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -1215,8 +1230,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\TransactionsResponse
      */
-    public function transactionsUsingGET($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function transactionsUsingGET($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->transactionsUsingGETWithHttpInfo($account_id, $x_access_token, $date_from, $date_to, $next_item_key);
         return $response;
     }
@@ -1236,8 +1252,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\TransactionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function transactionsUsingGETWithHttpInfo($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function transactionsUsingGETWithHttpInfo($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransactionsResponse';
         $request = $this->transactionsUsingGETRequest($account_id, $x_access_token, $date_from, $date_to, $next_item_key);
 
@@ -1410,8 +1427,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transactionsUsingGETAsync($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function transactionsUsingGETAsync($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->transactionsUsingGETAsyncWithHttpInfo($account_id, $x_access_token, $date_from, $date_to, $next_item_key)
             ->then(
                 function ($response) {
@@ -1434,8 +1452,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function transactionsUsingGETAsyncWithHttpInfo($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function transactionsUsingGETAsyncWithHttpInfo($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\TransactionsResponse';
         $request = $this->transactionsUsingGETRequest($account_id, $x_access_token, $date_from, $date_to, $next_item_key);
 
@@ -1488,8 +1507,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function transactionsUsingGETRequest($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    protected function transactionsUsingGETRequest($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'account_id' is set
         if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -1630,8 +1650,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\VisaTransactionsResponse
      */
-    public function visaTransactionsUsingGET($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function visaTransactionsUsingGET($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->visaTransactionsUsingGETWithHttpInfo($account_id, $x_access_token, $date_from, $date_to, $next_item_key);
         return $response;
     }
@@ -1651,8 +1672,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\VisaTransactionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function visaTransactionsUsingGETWithHttpInfo($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function visaTransactionsUsingGETWithHttpInfo($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VisaTransactionsResponse';
         $request = $this->visaTransactionsUsingGETRequest($account_id, $x_access_token, $date_from, $date_to, $next_item_key);
 
@@ -1825,8 +1847,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function visaTransactionsUsingGETAsync($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function visaTransactionsUsingGETAsync($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->visaTransactionsUsingGETAsyncWithHttpInfo($account_id, $x_access_token, $date_from, $date_to, $next_item_key)
             ->then(
                 function ($response) {
@@ -1849,8 +1872,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function visaTransactionsUsingGETAsyncWithHttpInfo($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    public function visaTransactionsUsingGETAsyncWithHttpInfo($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VisaTransactionsResponse';
         $request = $this->visaTransactionsUsingGETRequest($account_id, $x_access_token, $date_from, $date_to, $next_item_key);
 
@@ -1903,8 +1927,9 @@ class AccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function visaTransactionsUsingGETRequest($account_id, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $date_from = null, $date_to = null, $next_item_key = null)
+    protected function visaTransactionsUsingGETRequest($account_id, $x_access_token = null, $date_from = null, $date_to = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'account_id' is set
         if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
             throw new \InvalidArgumentException(

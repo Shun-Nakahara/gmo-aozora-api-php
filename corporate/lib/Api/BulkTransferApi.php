@@ -99,8 +99,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Corporate\Client\Model\TransferCancelResponse
      */
-    public function bulkTransferCancelUsingPOST($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferCancelUsingPOST($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->bulkTransferCancelUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -117,8 +118,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Corporate\Client\Model\TransferCancelResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bulkTransferCancelUsingPOSTWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferCancelUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\TransferCancelResponse';
         $request = $this->bulkTransferCancelUsingPOSTRequest($body, $x_access_token);
 
@@ -288,8 +290,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferCancelUsingPOSTAsync($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferCancelUsingPOSTAsync($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->bulkTransferCancelUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -309,8 +312,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferCancelUsingPOSTAsyncWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferCancelUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\TransferCancelResponse';
         $request = $this->bulkTransferCancelUsingPOSTRequest($body, $x_access_token);
 
@@ -360,8 +364,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function bulkTransferCancelUsingPOSTRequest($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function bulkTransferCancelUsingPOSTRequest($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -467,8 +472,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Corporate\Client\Model\TransferFeeResponse
      */
-    public function bulkTransferFeeUsingPOST($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferFeeUsingPOST($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->bulkTransferFeeUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -485,8 +491,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Corporate\Client\Model\TransferFeeResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bulkTransferFeeUsingPOSTWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferFeeUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\TransferFeeResponse';
         $request = $this->bulkTransferFeeUsingPOSTRequest($body, $x_access_token);
 
@@ -656,8 +663,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferFeeUsingPOSTAsync($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferFeeUsingPOSTAsync($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->bulkTransferFeeUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -677,8 +685,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferFeeUsingPOSTAsyncWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferFeeUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\TransferFeeResponse';
         $request = $this->bulkTransferFeeUsingPOSTRequest($body, $x_access_token);
 
@@ -728,8 +737,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function bulkTransferFeeUsingPOSTRequest($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function bulkTransferFeeUsingPOSTRequest($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -836,8 +846,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Corporate\Client\Model\TransferRequestResultResponse
      */
-    public function bulkTransferRequestResultUsingGET($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferRequestResultUsingGET($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->bulkTransferRequestResultUsingGETWithHttpInfo($account_id, $apply_no, $x_access_token);
         return $response;
     }
@@ -855,8 +866,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Corporate\Client\Model\TransferRequestResultResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bulkTransferRequestResultUsingGETWithHttpInfo($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferRequestResultUsingGETWithHttpInfo($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\TransferRequestResultResponse';
         $request = $this->bulkTransferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token);
 
@@ -1027,8 +1039,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferRequestResultUsingGETAsync($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferRequestResultUsingGETAsync($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->bulkTransferRequestResultUsingGETAsyncWithHttpInfo($account_id, $apply_no, $x_access_token)
             ->then(
                 function ($response) {
@@ -1049,8 +1062,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferRequestResultUsingGETAsyncWithHttpInfo($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferRequestResultUsingGETAsyncWithHttpInfo($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\TransferRequestResultResponse';
         $request = $this->bulkTransferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token);
 
@@ -1101,8 +1115,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function bulkTransferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function bulkTransferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'account_id' is set
         if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -1219,8 +1234,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Corporate\Client\Model\BulkTransferRequestResponse
      */
-    public function bulkTransferRequestUsingPOST($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferRequestUsingPOST($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->bulkTransferRequestUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -1237,8 +1253,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Corporate\Client\Model\BulkTransferRequestResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bulkTransferRequestUsingPOSTWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferRequestUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\BulkTransferRequestResponse';
         $request = $this->bulkTransferRequestUsingPOSTRequest($body, $x_access_token);
 
@@ -1408,8 +1425,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferRequestUsingPOSTAsync($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferRequestUsingPOSTAsync($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->bulkTransferRequestUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -1429,8 +1447,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferRequestUsingPOSTAsyncWithHttpInfo($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    public function bulkTransferRequestUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\BulkTransferRequestResponse';
         $request = $this->bulkTransferRequestUsingPOSTRequest($body, $x_access_token);
 
@@ -1480,8 +1499,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function bulkTransferRequestUsingPOSTRequest($body, $x_access_token = $_ENV['X_ACCESS_TOKEN'])
+    protected function bulkTransferRequestUsingPOSTRequest($body, $x_access_token = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -1597,8 +1617,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Corporate\Client\Model\BulkTransferStatusResponse
      */
-    public function bulkTransferStatusUsingGET($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    public function bulkTransferStatusUsingGET($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->bulkTransferStatusUsingGETWithHttpInfo($account_id, $query_key_class, $x_access_token, $detail_info_necessity, $bulktransfer_item_key, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term);
         return $response;
     }
@@ -1625,8 +1646,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Corporate\Client\Model\BulkTransferStatusResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bulkTransferStatusUsingGETWithHttpInfo($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    public function bulkTransferStatusUsingGETWithHttpInfo($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\BulkTransferStatusResponse';
         $request = $this->bulkTransferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token, $detail_info_necessity, $bulktransfer_item_key, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term);
 
@@ -1806,8 +1828,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferStatusUsingGETAsync($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    public function bulkTransferStatusUsingGETAsync($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->bulkTransferStatusUsingGETAsyncWithHttpInfo($account_id, $query_key_class, $x_access_token, $detail_info_necessity, $bulktransfer_item_key, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term)
             ->then(
                 function ($response) {
@@ -1837,8 +1860,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bulkTransferStatusUsingGETAsyncWithHttpInfo($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    public function bulkTransferStatusUsingGETAsyncWithHttpInfo($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Corporate\Client\Model\BulkTransferStatusResponse';
         $request = $this->bulkTransferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token, $detail_info_necessity, $bulktransfer_item_key, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term);
 
@@ -1898,8 +1922,9 @@ class BulkTransferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function bulkTransferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token = $_ENV['X_ACCESS_TOKEN'], $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
+    protected function bulkTransferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'account_id' is set
         if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
             throw new \InvalidArgumentException(

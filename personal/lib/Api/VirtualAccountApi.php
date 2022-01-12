@@ -105,8 +105,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\VaDepositTransactionsResponse
      */
-    public function depositTransactionsUsingGET($x_access_token = $_ENV['X_ACCESS_TOKEN'], $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
+    public function depositTransactionsUsingGET($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->depositTransactionsUsingGETWithHttpInfo($x_access_token, $va_contract_auth_key, $ra_id, $va_id, $date_from, $date_to, $sort_order_code, $next_item_key);
         return $response;
     }
@@ -129,8 +130,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\VaDepositTransactionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function depositTransactionsUsingGETWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
+    public function depositTransactionsUsingGETWithHttpInfo($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaDepositTransactionsResponse';
         $request = $this->depositTransactionsUsingGETRequest($x_access_token, $va_contract_auth_key, $ra_id, $va_id, $date_from, $date_to, $sort_order_code, $next_item_key);
 
@@ -306,8 +308,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function depositTransactionsUsingGETAsync($x_access_token = $_ENV['X_ACCESS_TOKEN'], $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
+    public function depositTransactionsUsingGETAsync($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->depositTransactionsUsingGETAsyncWithHttpInfo($x_access_token, $va_contract_auth_key, $ra_id, $va_id, $date_from, $date_to, $sort_order_code, $next_item_key)
             ->then(
                 function ($response) {
@@ -333,8 +336,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function depositTransactionsUsingGETAsyncWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
+    public function depositTransactionsUsingGETAsyncWithHttpInfo($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaDepositTransactionsResponse';
         $request = $this->depositTransactionsUsingGETRequest($x_access_token, $va_contract_auth_key, $ra_id, $va_id, $date_from, $date_to, $sort_order_code, $next_item_key);
 
@@ -390,8 +394,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function depositTransactionsUsingGETRequest($x_access_token = $_ENV['X_ACCESS_TOKEN'], $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
+    protected function depositTransactionsUsingGETRequest($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -516,8 +521,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\VaIssueResponse
      */
-    public function issueUsingPOST($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function issueUsingPOST($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->issueUsingPOSTWithHttpInfo($x_access_token, $body);
         return $response;
     }
@@ -534,8 +540,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\VaIssueResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function issueUsingPOSTWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function issueUsingPOSTWithHttpInfo($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaIssueResponse';
         $request = $this->issueUsingPOSTRequest($x_access_token, $body);
 
@@ -705,8 +712,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function issueUsingPOSTAsync($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function issueUsingPOSTAsync($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->issueUsingPOSTAsyncWithHttpInfo($x_access_token, $body)
             ->then(
                 function ($response) {
@@ -726,8 +734,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function issueUsingPOSTAsyncWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function issueUsingPOSTAsyncWithHttpInfo($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaIssueResponse';
         $request = $this->issueUsingPOSTRequest($x_access_token, $body);
 
@@ -777,8 +786,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function issueUsingPOSTRequest($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    protected function issueUsingPOSTRequest($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -878,8 +888,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\VaStatusChangeResponse
      */
-    public function statusChangeUsingPOST($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function statusChangeUsingPOST($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->statusChangeUsingPOSTWithHttpInfo($x_access_token, $body);
         return $response;
     }
@@ -896,8 +907,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\VaStatusChangeResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function statusChangeUsingPOSTWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function statusChangeUsingPOSTWithHttpInfo($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaStatusChangeResponse';
         $request = $this->statusChangeUsingPOSTRequest($x_access_token, $body);
 
@@ -1067,8 +1079,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function statusChangeUsingPOSTAsync($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function statusChangeUsingPOSTAsync($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->statusChangeUsingPOSTAsyncWithHttpInfo($x_access_token, $body)
             ->then(
                 function ($response) {
@@ -1088,8 +1101,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function statusChangeUsingPOSTAsyncWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function statusChangeUsingPOSTAsyncWithHttpInfo($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaStatusChangeResponse';
         $request = $this->statusChangeUsingPOSTRequest($x_access_token, $body);
 
@@ -1139,8 +1153,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function statusChangeUsingPOSTRequest($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    protected function statusChangeUsingPOSTRequest($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -1240,8 +1255,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\VaCloseRequestResponse
      */
-    public function vaCloseRequestUsingPOST($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function vaCloseRequestUsingPOST($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->vaCloseRequestUsingPOSTWithHttpInfo($x_access_token, $body);
         return $response;
     }
@@ -1258,8 +1274,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\VaCloseRequestResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function vaCloseRequestUsingPOSTWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function vaCloseRequestUsingPOSTWithHttpInfo($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaCloseRequestResponse';
         $request = $this->vaCloseRequestUsingPOSTRequest($x_access_token, $body);
 
@@ -1429,8 +1446,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function vaCloseRequestUsingPOSTAsync($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function vaCloseRequestUsingPOSTAsync($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->vaCloseRequestUsingPOSTAsyncWithHttpInfo($x_access_token, $body)
             ->then(
                 function ($response) {
@@ -1450,8 +1468,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function vaCloseRequestUsingPOSTAsyncWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function vaCloseRequestUsingPOSTAsyncWithHttpInfo($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaCloseRequestResponse';
         $request = $this->vaCloseRequestUsingPOSTRequest($x_access_token, $body);
 
@@ -1501,8 +1520,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function vaCloseRequestUsingPOSTRequest($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    protected function vaCloseRequestUsingPOSTRequest($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -1602,8 +1622,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \Ganb\Personal\Client\Model\VaListResponse
      */
-    public function vaListUsingPOST($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function vaListUsingPOST($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         list($response) = $this->vaListUsingPOSTWithHttpInfo($x_access_token, $body);
         return $response;
     }
@@ -1620,8 +1641,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return array of \Ganb\Personal\Client\Model\VaListResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function vaListUsingPOSTWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function vaListUsingPOSTWithHttpInfo($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaListResponse';
         $request = $this->vaListUsingPOSTRequest($x_access_token, $body);
 
@@ -1791,8 +1813,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function vaListUsingPOSTAsync($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function vaListUsingPOSTAsync($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         return $this->vaListUsingPOSTAsyncWithHttpInfo($x_access_token, $body)
             ->then(
                 function ($response) {
@@ -1812,8 +1835,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function vaListUsingPOSTAsyncWithHttpInfo($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    public function vaListUsingPOSTAsyncWithHttpInfo($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         $returnType = '\Ganb\Personal\Client\Model\VaListResponse';
         $request = $this->vaListUsingPOSTRequest($x_access_token, $body);
 
@@ -1863,8 +1887,9 @@ class VirtualAccountApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function vaListUsingPOSTRequest($x_access_token = $_ENV['X_ACCESS_TOKEN'], $body = null)
+    protected function vaListUsingPOSTRequest($x_access_token = null, $body = null)
     {
+        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
