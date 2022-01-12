@@ -101,7 +101,7 @@ class BulkTransferApi
      */
     public function bulkTransferCancelUsingPOST($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->bulkTransferCancelUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -120,7 +120,7 @@ class BulkTransferApi
      */
     public function bulkTransferCancelUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\TransferCancelResponse';
         $request = $this->bulkTransferCancelUsingPOSTRequest($body, $x_access_token);
 
@@ -292,7 +292,7 @@ class BulkTransferApi
      */
     public function bulkTransferCancelUsingPOSTAsync($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->bulkTransferCancelUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -314,7 +314,7 @@ class BulkTransferApi
      */
     public function bulkTransferCancelUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\TransferCancelResponse';
         $request = $this->bulkTransferCancelUsingPOSTRequest($body, $x_access_token);
 
@@ -366,7 +366,7 @@ class BulkTransferApi
      */
     protected function bulkTransferCancelUsingPOSTRequest($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -474,7 +474,7 @@ class BulkTransferApi
      */
     public function bulkTransferFeeUsingPOST($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->bulkTransferFeeUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -493,7 +493,7 @@ class BulkTransferApi
      */
     public function bulkTransferFeeUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\TransferFeeResponse';
         $request = $this->bulkTransferFeeUsingPOSTRequest($body, $x_access_token);
 
@@ -665,7 +665,7 @@ class BulkTransferApi
      */
     public function bulkTransferFeeUsingPOSTAsync($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->bulkTransferFeeUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -687,7 +687,7 @@ class BulkTransferApi
      */
     public function bulkTransferFeeUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\TransferFeeResponse';
         $request = $this->bulkTransferFeeUsingPOSTRequest($body, $x_access_token);
 
@@ -739,7 +739,7 @@ class BulkTransferApi
      */
     protected function bulkTransferFeeUsingPOSTRequest($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -848,7 +848,7 @@ class BulkTransferApi
      */
     public function bulkTransferRequestResultUsingGET($account_id, $apply_no, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->bulkTransferRequestResultUsingGETWithHttpInfo($account_id, $apply_no, $x_access_token);
         return $response;
     }
@@ -868,7 +868,7 @@ class BulkTransferApi
      */
     public function bulkTransferRequestResultUsingGETWithHttpInfo($account_id, $apply_no, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\TransferRequestResultResponse';
         $request = $this->bulkTransferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token);
 
@@ -1041,7 +1041,7 @@ class BulkTransferApi
      */
     public function bulkTransferRequestResultUsingGETAsync($account_id, $apply_no, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->bulkTransferRequestResultUsingGETAsyncWithHttpInfo($account_id, $apply_no, $x_access_token)
             ->then(
                 function ($response) {
@@ -1064,7 +1064,7 @@ class BulkTransferApi
      */
     public function bulkTransferRequestResultUsingGETAsyncWithHttpInfo($account_id, $apply_no, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\TransferRequestResultResponse';
         $request = $this->bulkTransferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token);
 
@@ -1117,7 +1117,7 @@ class BulkTransferApi
      */
     protected function bulkTransferRequestResultUsingGETRequest($account_id, $apply_no, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'account_id' is set
         if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -1236,7 +1236,7 @@ class BulkTransferApi
      */
     public function bulkTransferRequestUsingPOST($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->bulkTransferRequestUsingPOSTWithHttpInfo($body, $x_access_token);
         return $response;
     }
@@ -1255,7 +1255,7 @@ class BulkTransferApi
      */
     public function bulkTransferRequestUsingPOSTWithHttpInfo($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\BulkTransferRequestResponse';
         $request = $this->bulkTransferRequestUsingPOSTRequest($body, $x_access_token);
 
@@ -1427,7 +1427,7 @@ class BulkTransferApi
      */
     public function bulkTransferRequestUsingPOSTAsync($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->bulkTransferRequestUsingPOSTAsyncWithHttpInfo($body, $x_access_token)
             ->then(
                 function ($response) {
@@ -1449,7 +1449,7 @@ class BulkTransferApi
      */
     public function bulkTransferRequestUsingPOSTAsyncWithHttpInfo($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\BulkTransferRequestResponse';
         $request = $this->bulkTransferRequestUsingPOSTRequest($body, $x_access_token);
 
@@ -1501,7 +1501,7 @@ class BulkTransferApi
      */
     protected function bulkTransferRequestUsingPOSTRequest($body, $x_access_token = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
@@ -1619,7 +1619,7 @@ class BulkTransferApi
      */
     public function bulkTransferStatusUsingGET($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->bulkTransferStatusUsingGETWithHttpInfo($account_id, $query_key_class, $x_access_token, $detail_info_necessity, $bulktransfer_item_key, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term);
         return $response;
     }
@@ -1648,7 +1648,7 @@ class BulkTransferApi
      */
     public function bulkTransferStatusUsingGETWithHttpInfo($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\BulkTransferStatusResponse';
         $request = $this->bulkTransferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token, $detail_info_necessity, $bulktransfer_item_key, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term);
 
@@ -1830,7 +1830,7 @@ class BulkTransferApi
      */
     public function bulkTransferStatusUsingGETAsync($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->bulkTransferStatusUsingGETAsyncWithHttpInfo($account_id, $query_key_class, $x_access_token, $detail_info_necessity, $bulktransfer_item_key, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term)
             ->then(
                 function ($response) {
@@ -1862,7 +1862,7 @@ class BulkTransferApi
      */
     public function bulkTransferStatusUsingGETAsyncWithHttpInfo($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Personal\Client\Model\BulkTransferStatusResponse';
         $request = $this->bulkTransferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token, $detail_info_necessity, $bulktransfer_item_key, $apply_no, $date_from, $date_to, $next_item_key, $request_transfer_status, $request_transfer_class, $request_transfer_term);
 
@@ -1924,7 +1924,7 @@ class BulkTransferApi
      */
     protected function bulkTransferStatusUsingGETRequest($account_id, $query_key_class, $x_access_token = null, $detail_info_necessity = null, $bulktransfer_item_key = null, $apply_no = null, $date_from = null, $date_to = null, $next_item_key = null, $request_transfer_status = null, $request_transfer_class = null, $request_transfer_term = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'account_id' is set
         if ($account_id === null || (is_array($account_id) && count($account_id) === 0)) {
             throw new \InvalidArgumentException(

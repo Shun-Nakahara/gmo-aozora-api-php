@@ -107,7 +107,7 @@ class VirtualAccountApi
      */
     public function depositTransactionsUsingGET($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->depositTransactionsUsingGETWithHttpInfo($x_access_token, $va_contract_auth_key, $ra_id, $va_id, $date_from, $date_to, $sort_order_code, $next_item_key);
         return $response;
     }
@@ -132,7 +132,7 @@ class VirtualAccountApi
      */
     public function depositTransactionsUsingGETWithHttpInfo($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaDepositTransactionsResponse';
         $request = $this->depositTransactionsUsingGETRequest($x_access_token, $va_contract_auth_key, $ra_id, $va_id, $date_from, $date_to, $sort_order_code, $next_item_key);
 
@@ -310,7 +310,7 @@ class VirtualAccountApi
      */
     public function depositTransactionsUsingGETAsync($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->depositTransactionsUsingGETAsyncWithHttpInfo($x_access_token, $va_contract_auth_key, $ra_id, $va_id, $date_from, $date_to, $sort_order_code, $next_item_key)
             ->then(
                 function ($response) {
@@ -338,7 +338,7 @@ class VirtualAccountApi
      */
     public function depositTransactionsUsingGETAsyncWithHttpInfo($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaDepositTransactionsResponse';
         $request = $this->depositTransactionsUsingGETRequest($x_access_token, $va_contract_auth_key, $ra_id, $va_id, $date_from, $date_to, $sort_order_code, $next_item_key);
 
@@ -396,7 +396,7 @@ class VirtualAccountApi
      */
     protected function depositTransactionsUsingGETRequest($x_access_token = null, $va_contract_auth_key = null, $ra_id = null, $va_id = null, $date_from = null, $date_to = null, $sort_order_code = null, $next_item_key = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -523,7 +523,7 @@ class VirtualAccountApi
      */
     public function issueUsingPOST($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->issueUsingPOSTWithHttpInfo($x_access_token, $body);
         return $response;
     }
@@ -542,7 +542,7 @@ class VirtualAccountApi
      */
     public function issueUsingPOSTWithHttpInfo($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaIssueResponse';
         $request = $this->issueUsingPOSTRequest($x_access_token, $body);
 
@@ -714,7 +714,7 @@ class VirtualAccountApi
      */
     public function issueUsingPOSTAsync($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->issueUsingPOSTAsyncWithHttpInfo($x_access_token, $body)
             ->then(
                 function ($response) {
@@ -736,7 +736,7 @@ class VirtualAccountApi
      */
     public function issueUsingPOSTAsyncWithHttpInfo($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaIssueResponse';
         $request = $this->issueUsingPOSTRequest($x_access_token, $body);
 
@@ -788,7 +788,7 @@ class VirtualAccountApi
      */
     protected function issueUsingPOSTRequest($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -890,7 +890,7 @@ class VirtualAccountApi
      */
     public function statusChangeUsingPOST($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->statusChangeUsingPOSTWithHttpInfo($x_access_token, $body);
         return $response;
     }
@@ -909,7 +909,7 @@ class VirtualAccountApi
      */
     public function statusChangeUsingPOSTWithHttpInfo($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaStatusChangeResponse';
         $request = $this->statusChangeUsingPOSTRequest($x_access_token, $body);
 
@@ -1081,7 +1081,7 @@ class VirtualAccountApi
      */
     public function statusChangeUsingPOSTAsync($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->statusChangeUsingPOSTAsyncWithHttpInfo($x_access_token, $body)
             ->then(
                 function ($response) {
@@ -1103,7 +1103,7 @@ class VirtualAccountApi
      */
     public function statusChangeUsingPOSTAsyncWithHttpInfo($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaStatusChangeResponse';
         $request = $this->statusChangeUsingPOSTRequest($x_access_token, $body);
 
@@ -1155,7 +1155,7 @@ class VirtualAccountApi
      */
     protected function statusChangeUsingPOSTRequest($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -1257,7 +1257,7 @@ class VirtualAccountApi
      */
     public function vaCloseRequestUsingPOST($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->vaCloseRequestUsingPOSTWithHttpInfo($x_access_token, $body);
         return $response;
     }
@@ -1276,7 +1276,7 @@ class VirtualAccountApi
      */
     public function vaCloseRequestUsingPOSTWithHttpInfo($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaCloseRequestResponse';
         $request = $this->vaCloseRequestUsingPOSTRequest($x_access_token, $body);
 
@@ -1448,7 +1448,7 @@ class VirtualAccountApi
      */
     public function vaCloseRequestUsingPOSTAsync($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->vaCloseRequestUsingPOSTAsyncWithHttpInfo($x_access_token, $body)
             ->then(
                 function ($response) {
@@ -1470,7 +1470,7 @@ class VirtualAccountApi
      */
     public function vaCloseRequestUsingPOSTAsyncWithHttpInfo($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaCloseRequestResponse';
         $request = $this->vaCloseRequestUsingPOSTRequest($x_access_token, $body);
 
@@ -1522,7 +1522,7 @@ class VirtualAccountApi
      */
     protected function vaCloseRequestUsingPOSTRequest($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -1624,7 +1624,7 @@ class VirtualAccountApi
      */
     public function vaListUsingPOST($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         list($response) = $this->vaListUsingPOSTWithHttpInfo($x_access_token, $body);
         return $response;
     }
@@ -1643,7 +1643,7 @@ class VirtualAccountApi
      */
     public function vaListUsingPOSTWithHttpInfo($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaListResponse';
         $request = $this->vaListUsingPOSTRequest($x_access_token, $body);
 
@@ -1815,7 +1815,7 @@ class VirtualAccountApi
      */
     public function vaListUsingPOSTAsync($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         return $this->vaListUsingPOSTAsyncWithHttpInfo($x_access_token, $body)
             ->then(
                 function ($response) {
@@ -1837,7 +1837,7 @@ class VirtualAccountApi
      */
     public function vaListUsingPOSTAsyncWithHttpInfo($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         $returnType = '\Ganb\Corporate\Client\Model\VaListResponse';
         $request = $this->vaListUsingPOSTRequest($x_access_token, $body);
 
@@ -1889,7 +1889,7 @@ class VirtualAccountApi
      */
     protected function vaListUsingPOSTRequest($x_access_token = null, $body = null)
     {
-        $x_access_token ??= $_ENV('X_ACCESS_TOKEN');
+        $x_access_token ??= $_ENV['X_ACCESS_TOKEN'];
         // verify the required parameter 'x_access_token' is set
         if ($x_access_token === null || (is_array($x_access_token) && count($x_access_token) === 0)) {
             throw new \InvalidArgumentException(
